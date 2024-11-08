@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import wedding from "../../../../public/images/wedding.jpeg"
+
 import Button from '@/components/common/Button';
 
 const WeddingSection = () => {
@@ -10,7 +10,7 @@ const WeddingSection = () => {
             
             <div className="absolute inset-0">
                 <Image
-                    src={wedding}
+                    src="/images/wedding.jpeg"
                     alt="Wedding couple under veil"
                     fill
                     className="object-cover brightness-75 "
@@ -35,8 +35,8 @@ const WeddingSection = () => {
                             Begin your journey to a stress-free, beautifully organized celebration today with GatherGram
                         </p>
 
-                        <div className='text-[#D81159]'>
-                            <Button title="Let’s get started!" className="font-maiandra text-[black] bg-white" />
+                        <div className='text-black'>
+                            <Button title="Let’s get started!" className="font-maiandra  bg-white" />
                         </div>
                     </div>
                 </div>

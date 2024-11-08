@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { LucideChevronDown } from 'lucide-react';
 import { Faqs } from './FaqsData';
 import Button from '@/components/common/Button';
-import star from "../../../../public/images/stars.svg"
 import Image from 'next/image';
 
 const FAQSection = () => {
@@ -15,8 +14,8 @@ const FAQSection = () => {
         <div className="w-[1728px] h-[1520px] bg-[#FFD6E4]  px-4   ">
             <div className=" ">
                 <div className=' absolute'>
-                    <div className=' relative '><Image src={star} alt='star' /></div>
-                    <div className=' relative  top-3 left-0  '><Image src={star} alt='star' /></div>
+                    <div className=' relative '><Image src="/images/stars.svg" width={189} height={189} alt='star' /></div>
+                    <div className=' relative  top-3 left-0  '><Image src="/images/stars.svg" width={189} height={189} alt='star' /></div>
                 </div>
                
                 <div className="text-center mb-12 relative pt-40 ">

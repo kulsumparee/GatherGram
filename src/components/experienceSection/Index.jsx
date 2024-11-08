@@ -1,15 +1,7 @@
 "use client";
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import Button from '../common/Button';
-import image1 from "../../../public/images/Experience/Ellipse 35.svg"
-import image2 from "../../../public/images/Experience/Ellipse 39.svg"
-import image3 from "../../../public/images/Experience/Ellipse 43.svg"
-import image4 from "../../../public/images/Experience/Ellipse 44.svg"
-import curve1 from "../../../public/images/Experience/Group.svg"
-import curve2 from "../../../public/images/Experience/Group (2).svg"
-import curve3 from "../../../public/images/Experience/Group (3).svg"
-import curve4 from "../../../public/images/Experience/Group 76.png"
+
 
 const ExperienceSection = () => {
     
@@ -21,8 +13,10 @@ const ExperienceSection = () => {
                 <div className=" absolute top-[150px] left-[340px] ">
                     <div className="relative">
                         <Image
-                            src={curve1}
+                            src="/images/Experience/Group.svg"
                             alt='curve'
+                            width={163}
+                            height={54}
                         />
 
                     </div>
@@ -30,8 +24,10 @@ const ExperienceSection = () => {
                     <div className=" absolute top-[340px]  ">
                         <div className="relative left-16">
                             <Image
-                                src={curve2}
+                                src="/images/Experience/Group (2).svg"
                                 alt='curve'
+                                width={196}
+                                height={79}
                             />
 
                         </div>
@@ -39,8 +35,10 @@ const ExperienceSection = () => {
                     <div className=" absolute right-0 top-48  transform translate-y-[-50%]  ">
                         <div className="relative left-[1050px]">
                             <Image
-                                src={curve4}
+                                src="/images/Experience/Group 76.png"
                                 alt='curve'
+                                width={124}
+                                height={123}
                             />
 
                         </div>
@@ -50,7 +48,7 @@ const ExperienceSection = () => {
                 <div className="absolute top-[254px] ">
                     <div className="relative">
                         <Image
-                            src={image1}
+                            src="/images/Experience/Ellipse 35.svg"
                             alt="Effortless experience"
                             width={220}
                             height={220}
@@ -65,7 +63,7 @@ const ExperienceSection = () => {
                 <div className="absolute right-0 top-40 transform translate-y-[-50%]">
                     <div className="relative">
                         <Image
-                            src={image2}
+                            src="/images/Experience/Ellipse 39.svg"
                             alt="Memorable moments"
                             width={220}
                             height={220}
@@ -81,8 +79,10 @@ const ExperienceSection = () => {
                     <div className=" absolute  top-[760px] left-[900px]   ">
                         <div className="relative lef-[600px] ">
                             <Image
-                                src={curve3}
+                                src="/images/Experience/Group (3).svg"
                                 alt='curve'
+                                width={110}
+                                height={120}
                             />
 
                         </div>
@@ -105,7 +105,7 @@ const ExperienceSection = () => {
                 <div className="absolute top-[750px] left-[213px] transform translate-y-[-50%]">
                     <div className="relative">
                         <Image
-                            src={image4}
+                            src="/images/Experience/Ellipse 44.svg"
                             alt="Tailored just for you"
                             width={220}
                             height={220}
@@ -121,7 +121,7 @@ const ExperienceSection = () => {
                 <div className="absolute top-[625px] left-[1247px]  transform translate-y-[-50%]">
                     <div className="relative">
                         <Image
-                            src={image3}
+                            src="/images/Experience/Ellipse 43.svg"
                             alt="Joyful moments"
                             width={220}
                             height={220}

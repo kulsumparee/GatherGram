@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        maiandra: ['Maiandra GD', 'sans-serif'],
+        mauline: ['Mauline', 'cursive'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

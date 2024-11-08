@@ -29,7 +29,7 @@ const Footer = () => {
         ]
     };
     return (
-        <div className=' bg-black w-[1728px] md:h-[612px] text-white px-10 md:px-20'>
+        <div className=' bg-black w-[1728px] md:h-[712px] text-white px-10 md:px-20'>
             <div className=' flex  md:flex-row flex-col items-center space-y-10 md:justify-between py-10 border-b'>
                 <div>
                     <h1 className=' font-maiandra text-[32px] '>Join Our Newsletter</h1>

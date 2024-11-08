@@ -1,3 +1,4 @@
+import ExperienceSection from "@/components/experienceSection/Index";
 import ContactForm from "@/components/forms/ContactForm";
 import Footer from "@/components/layout/Footer";
 import CelebrationCard from "@/components/sections/celebrationCard/Index";
@@ -11,10 +12,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <ExperienceSection/>
       <Features />
       <CelebrationCard />
-      <FAQSection />
-      
+      <FAQSection />      
       <WeddingSection />
       {/* <ContactForm/> */}
       <Footer/>

@@ -41,7 +41,7 @@ const Hero = () => {
                               Register for free
                           </p>
 
-                          <ArrowDown className="w-6 h-6 text-white mt-2 cursor-pointer" />
+                        <ArrowDown className="w-6 h-6 text-white mt-2 cursor-pointer animate-bounce-slow" />
                       </div>
                   </div>
             </section>

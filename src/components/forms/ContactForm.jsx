@@ -3,10 +3,9 @@ import React, { useState } from 'react';
 import cross from "../../../public/images/icons/cross.svg";
 import mail from "../../../public/images/icons/mail.svg";
 import facebook from "../../../public/images/icons/facebook.svg";
-
 import Image from 'next/image';
 
-const ContactForm = () => {
+const ContactForm = ({ onClose }) => {
     const [formData, setFormData] = useState({
         role: 'Bride',
         name: '',
@@ -26,26 +25,28 @@ const ContactForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
+        // Optional: close form after submission
+        // onClose();
     };
 
     return (
-        <div className="min-h-screen  bg-[#FFD6E4]  relative mx-20 px-20  py-10 ">
-            <div className="  grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
-               
-                <div className="flex flex-col  space-y-6 ">
-                   
-                        <div className='absolute right-10 top-5 cursor-pointer'>
-                            <Image
-                                src={cross}
-                                alt='close'
-                                className="w-8 h-8 hover:opacity-80 transition-opacity"
-                                priority
-                            />
+        <div className="min-h-screen bg-[#FFD6E4] relative mx-20 px-20 py-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
+                <div className="flex flex-col space-y-6">
+                    <div className='absolute right-10 top-5 cursor-pointer'>
+                        <Image
+                            src={cross}
+                            alt='close'
+                            className="w-8 h-8 hover:opacity-80 transition-opacity"
+                            priority
+                            onClick={onClose}
+                        />
                     </div>
+                    {/* Rest of your existing JSX remains the same */}
                     <p className="font-mauline text-[32px] sm:text-2xl text-[#EB87AB]">
                         Let's Connect and Get You Started
                     </p>
-                    <h1 className="font-mauline text-[64px] sm:text-4xl lg:text-5xl text-[#D81159] leading-tight">
+                    <h1 className="font-mauline text-[64px] sm:text-4xl w-[561px] lg:text-5xl text-[#D81159] leading-tight">
                         Simply share a few details with us
                     </h1>
                     <p className="font-maiandra text-[#EB87AB] text-lg max-w-xl">
@@ -59,16 +60,13 @@ const ContactForm = () => {
                     </div>
                 </div>
 
-               
                 <div className="w-full">
                     <div className="bg-[#FAFAFACC] rounded-xl shadow-lg p-6 sm:p-8">
                         <div className="relative">
-                            
-
                             <form onSubmit={handleSubmit} className="space-y-8">
                                 <div className="space-y-4">
                                     <p className="font-maiandra text-[24px] text-[#D81159]">I am the..</p>
-                                    <div className=" flex flex-wrap gap-5">
+                                    <div className="flex flex-wrap gap-5">
                                         {['Bride', 'Groom', 'Event Planner', 'Other'].map((role) => (
                                             <button
                                                 key={role}
@@ -86,9 +84,8 @@ const ContactForm = () => {
                                     </div>
                                 </div>
 
-                               
                                 {['name', 'email', 'phone', 'message'].map((field) => (
-                                    <div key={field} className="space-y-1">
+                                    <div key={field} className="space-y-1 pb-5">
                                         <input
                                             type={field === 'email' ? 'email' : 'text'}
                                             name={field}
@@ -103,18 +100,18 @@ const ContactForm = () => {
                                     </div>
                                 ))}
 
-                                <button
-                                    type="submit"
-                                    className="w-full sm:w-auto px-14 py-4 bg-[#D81159] text-white rounded-full
+                                <div className="py-10">
+                                    <button
+                                        type="submit"
+                                        className="sm:w-auto px-14 py-4 w-[250px] bg-[#D81159] text-white rounded-full
                                              hover:bg-[#c00f4f] transition-colors font-maiandra text-lg"
-                                >
-                                    Submit
-                                </button>
+                                    >
+                                        Submit
+                                    </button>
+                                </div>
                             </form>
-                            
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <Image src={facebook} alt='facebook' />

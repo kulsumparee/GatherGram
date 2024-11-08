@@ -4,7 +4,8 @@ import robot from "../../../../public/images/book.svg"
 import star1 from "../../../../public/images/highlights/star1.svg"
 import star2 from "../../../../public/images/highlights/star2.svg"
 import star3 from "../../../../public/images/highlights/star3.svg"
-import circle1 from "../../../../public/images/Ellipse 18.svg"
+import line1 from "../../../../public/images/highlights/line1.svg"
+import line2 from "../../../../public/images/highlights/line2.svg"
 import { CelebrationCardData } from './CardData';
 
 const CelebrationCard = () => {
@@ -21,10 +22,14 @@ const CelebrationCard = () => {
             <div className="relative z-10 max-w-6xl mx-auto">
                
                 <div className="text-center mb-12">
-                    <h2 className="font-mauline text-white text-4xl md:text-5xl mb-4">
-                        Celebrate With Ease
-                    </h2>
-                    <p className="font-maiandra text-white/90 text-lg ">
+                    <div className=' flex items-center justify-center gap-14'>
+                        <Image src={line2} alt='line' />
+                        <h2 className="font-mauline text-white text-[80px] mb-4">
+                            Celebrate With Ease
+                        </h2>
+                        <Image src={line1} alt='line' />
+                  </div>
+                    <p className="font-maiandra text-white/90 text-[32px] ">
                         From setup to celebration, here's how we make your wedding day <br />
                         hassle-free
                     </p>

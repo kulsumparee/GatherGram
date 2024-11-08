@@ -15,6 +15,15 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(10px)' },
+        }
+      },
+      animation: {
+        'bounce-slow': 'bounce 2s ease-in-out infinite',
+      }
     },
   },
   plugins: [],

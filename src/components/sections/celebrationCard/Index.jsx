@@ -11,13 +11,13 @@ import { CelebrationCardData } from './CardData';
 const CelebrationCard = () => {
     return (
         <div className="relative min-h-[600px] w-[1728px] bg-[#EB87AB] p-8 md:p-16 overflow-hidden">
-            {/* Decorative Elements */}
+           
             <div className="absolute top-8 left-8 w-10 text-white/80"><Image src={star1} alt='star1'/></div>
             <div className="absolute top-16 right-16 text-white/80"><Image src={star2} alt='star2' /></div>
             <div className="absolute bottom-12 left-24 text-white/80"><Image src={star3} alt='star3' /></div>
             <div className="absolute  top-[80%] left-[80%] text-white/80"><Image src={star1} alt='star1' /></div>
             
-            <div className="absolute top-10 right-0 w-52 h-48 bg-[#a43964] rounded-full -mr-12 -mt-12" />
+            <div className="absolute -top-10 -right-36 w-72 h-72 bg-[#f1659d] rounded-full " />
  
             <div className="relative z-10 max-w-6xl mx-auto">
                

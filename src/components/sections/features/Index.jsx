@@ -3,7 +3,7 @@ import FeaturesGrid from './GridLayout'
 
 const Features = () => {
   return (
-      <section id="/features" className="py-20 w-[1728px] bg-[#FAFAFA] mt-10 mx-auto">
+      <section href="/features" className="py-20 w-[1728px] bg-[#FAFAFA] mt-10 mx-auto">
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <h2 className=" text-[80px] font-mauline mb-6 relative inline-block leading-tight">
                   Designed with You and Your
@@ -18,7 +18,7 @@ const Features = () => {
           </div>
 
           <div>
-              {/* <FeaturesGrid/> */}
+              <FeaturesGrid/>
           </div>
       </section>
   )

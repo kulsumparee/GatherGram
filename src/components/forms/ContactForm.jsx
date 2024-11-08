@@ -25,8 +25,7 @@ const ContactForm = ({ onClose }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
-        // Optional: close form after submission
-        // onClose();
+        
     };
 
     return (
@@ -42,7 +41,7 @@ const ContactForm = ({ onClose }) => {
                             onClick={onClose}
                         />
                     </div>
-                    {/* Rest of your existing JSX remains the same */}
+                   
                     <p className="font-mauline text-[32px] sm:text-2xl text-[#EB87AB]">
                         Let's Connect and Get You Started
                     </p>

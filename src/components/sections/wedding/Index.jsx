@@ -35,8 +35,8 @@ const WeddingSection = () => {
                             Begin your journey to a stress-free, beautifully organized celebration today with GatherGram
                         </p>
 
-                        <div className='text-black'>
-                            <Button title="Let’s get started!" className="font-maiandra  bg-white" />
+                        <div className=''>
+                            <button className=' bg-white font-maiandra text-lg text-[#D81159] py-4 px-10 rounded-full'>Let's get started!</button>
                         </div>
                     </div>
                 </div>

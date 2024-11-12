@@ -77,7 +77,7 @@ const FeatureCard = ({ image, title, description }) => {
 export default function FeaturesGrid() {
     return (
         <section className="relative py-12 px-4">
-            <div className="max-w-6xl mx-auto">
+            <div className="px-10">
                 <div
                     className="grid gap-6"
                     style={{
@@ -87,17 +87,17 @@ export default function FeaturesGrid() {
                     }}
                 >
                     
-                    <div className="col-span-1 row-span-2 h-[500px]">
+                    <div className="col-span-1 row-span-1 h-[828px]">
                         <FeatureCard {...features[0]} />
                     </div>
-                    <div className="col-span-1 row-span-2 h-[500px]">
+                    <div className="col-span-1 row-span-1 h-[404px]">
                         <FeatureCard {...features[1]} />
                     </div>
                    
                     <div className="col-span-1 row-span-1 h-[250px]">
                         <FeatureCard {...features[2]} />
                     </div>
-                    <div className="col-span-1 row-span-2 h-[650px]">
+                    <div className="col-span-1 row-span-2 h-[828px]">
                         <FeatureCard {...features[3]} />
                     </div>
                    

@@ -10,7 +10,7 @@ import WeddingSection from "@/components/sections/wedding/Index";
 
 export default function Home() {
   return (
-    <>
+    <div className=" w-full lg:w-[1728px]">
       <Hero />
       <ExperienceSection/>
       <Features />
@@ -19,6 +19,6 @@ export default function Home() {
       <WeddingSection />
       {/* <ContactForm/> */}
       <Footer/>
-    </>
+    </div>
   );
 }

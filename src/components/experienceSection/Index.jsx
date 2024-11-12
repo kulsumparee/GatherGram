@@ -10,7 +10,10 @@ const ExperienceSection = () => {
         <div className="relative py-20 w-[1728px] h-[1003px] mx-auto">
 
             <div className="relative">
-                <div className=" absolute top-[150px] left-[340px] ">
+                 <span className="absolute font-mauline text-[24px] top-[180px] lef-[140px]  transform  font-handwriting text-[#eb97b6]">
+                            effortless
+                        </span>
+                <div className=" absolute top-[150px] left-[300px] ">
                     <div className="relative">
                         <Image
                             src="/images/Experience/Group.svg"
@@ -21,7 +24,7 @@ const ExperienceSection = () => {
 
                     </div>
 
-                    <div className=" absolute top-[340px]  ">
+                    <div className="absolute top-[340px]">
                         <div className="relative left-16">
                             <Image
                                 src="/images/Experience/Group (2).svg"
@@ -47,6 +50,7 @@ const ExperienceSection = () => {
                     
                 <div className="absolute top-[254px] ">
                     <div className="relative">
+                       
                         <Image
                             src="/images/Experience/Ellipse 35.svg"
                             alt="Effortless experience"
@@ -54,9 +58,7 @@ const ExperienceSection = () => {
                             height={220}
                             className="rounded-full"
                         />
-                        <span className="absolute font-serif -right-20 top-1/2 transform -translate-y-1/2 font-handwriting text-[#D81159]">
-                            effortless
-                        </span>
+                       
                     </div>
                 </div>
 

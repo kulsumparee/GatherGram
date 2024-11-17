@@ -19,10 +19,10 @@ const Hero = () => {
                         quality={100}
                     />
                 </div>
-                <div className='  '>
+                <div className=''>
                     <NavBar />
                 </div>
-                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0" />
                 <div className="relative z-10 flex flex-col items-center top-[320px] justify-center min-h-screen text-center px-4">
                     
                       <h1 className="font-mauline  text-white text-[100px] md:text-6xl lg:text-[104px]   leading-tight mb-8">

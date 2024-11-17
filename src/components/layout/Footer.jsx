@@ -50,7 +50,7 @@ const Footer = () => {
                               <Image src={logo} alt='footerlogo'/>
                                 <span className=" font-mauline text-[40px]">GatherGram</span>
                             </div>
-                            <p className="text-gray-400 text-base text-[14px] w-[339px] font-maiandra  pt-10">
+                            <p className="text-gray-400  text-4xl md:text-[25px] w-[350px] font-maiandra  pt-10">
                                 We bring all your wedding essentials into one hassle-free, secure, and budget-friendly platform designed to make your day as seamless as it is unforgettable.
                             </p>
                             <button className=" py-2 px-2 rounded-full bg-white text-black hover:text-white transition-colors">
@@ -62,11 +62,11 @@ const Footer = () => {
                         <div className="lg:col-span-5 grid grid-cols-1 md:grid-cols-3 gap-8">
                             {Object.entries(footerLinks).map(([category, links]) => (
                                 <div key={category}>
-                                    <h3 className=" font-maiandra text-[20px] pb-5">{category}</h3>
+                                    <h3 className=" font-maiandra text-[40px] md:text-[25px] pb-5">{category}</h3>
                                     <ul className="space-y-4">
                                         {links.map((link) => (
                                             <li key={link}>
-                                                <span className=" text-[#FAFAFA99] font-maiandra text-[14px] cursor-pointer hover:text-white transition-colors">
+                                                <span className=" text-[#FAFAFA99] font-maiandra md:text-[25px] cursor-pointer hover:text-white transition-colors">
                                                     {link}
                                                 </span>
                                             </li>

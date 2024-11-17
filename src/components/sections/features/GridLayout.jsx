@@ -76,43 +76,44 @@ const FeatureCard = ({ image, title, description }) => {
 };
 export default function FeaturesGrid() {
     return (
-        <section className="relative py-12 px-4">
-            <div className="px-10">
-                <div
-                    className="grid gap-6"
-                    style={{
-                        display: "grid",
-                        gridTemplateColumns: "repeat(2, auto)",
-                        gridTemplateRows: "repeat(4, auto)",
-                    }}
-                >
+        <div className="max-w-[1728px] mx-20 px-4 py-12">
+            <div className="grid grid-cols-2 gap-6">
+                
+                <div className="space-y-6">
                     
-                    <div className="col-span-1 row-span-1 h-[828px]">
+                    <div className="h-[828px]">
                         <FeatureCard {...features[0]} />
                     </div>
-                    <div className="col-span-1 row-span-1 h-[404px]">
-                        <FeatureCard {...features[1]} />
-                    </div>
                    
-                    <div className="col-span-1 row-span-1 h-[250px]">
+                    <div className="h-[404px]">
                         <FeatureCard {...features[2]} />
                     </div>
-                    <div className="col-span-1 row-span-2 h-[828px]">
-                        <FeatureCard {...features[3]} />
-                    </div>
                    
-                    <div className="col-span-1 row-span-2 h-[750px]">
+                    <div className="h-[600px]">
                         <FeatureCard {...features[4]} />
                     </div>
-                    <div className="col-span-1 row-span-2 h-[650px]">
-                        <FeatureCard {...features[5]} />
-                    </div>
-                    
-                    <div className="col-span-1 row-span-1 h-[250px]">
+                   
+                    <div className="h-[404px]">
                         <FeatureCard {...features[6]} />
                     </div>
                 </div>
+
+              
+                <div className="space-y-6">
+                   
+                    <div className="h-[404px]">
+                        <FeatureCard {...features[1]} />
+                    </div>
+                  
+                    <div className="h-[1150px]">
+                        <FeatureCard {...features[3]} />
+                    </div>
+                   
+                    <div className="h-[700px]">
+                        <FeatureCard {...features[5]} />
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
     );
 }

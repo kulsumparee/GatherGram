@@ -6,7 +6,7 @@ import Button from '@/components/common/Button';
 
 const WeddingSection = () => {
     return (
-        <div className="relative  h-[893px] w-[1728px]  overflow-hidden">
+        <div className="relative w-full max-w-[1728px] mx-auto min-h-[640px] md:h-[893px] overflow-hidden">
             
             <div className="absolute inset-0">
                 <Image
@@ -21,17 +21,17 @@ const WeddingSection = () => {
             </div>
 
            
-            <div className=" absolute h-full  w-[1728px]  ">
-                <div className="container  relative  left-20 top-40">
+            <div className="absolute h-full w-full">
+                <div className="relative px-6 md:px-20 pt-24 md:pt-40">
                     <div className="max-w-2xl space-y-6 ">
-                        <h1 className="text-[80px] md:leading-[104px]  font-mauline text-white space-y-2">
+                        <h1 className="text-4xl sm:text-6xl 2xl:text-[80px] md:leading-tight 2xl:leading-[104px] font-mauline text-white space-y-2">
                             Ready for an <br />
-                            <div className=' flex gap-4'>
+                            <div className=' flex flex-wrap gap-x-4'>
                                  <span className='text-[#FFD6E4]'>Unforgettable</span> <span>Wedding?</span>
                            </div>
                         </h1>
 
-                        <p className="text-[32px] font-maiandra text-gray-200 md:leading-[40px] md:py-5 ">
+                        <p className="text-lg sm:text-2xl 2xl:text-[32px] font-maiandra text-gray-200 md:leading-snug md:py-5 ">
                             Begin your journey to a stress-free, beautifully organized celebration today with GatherGram
                         </p>
 

@@ -10,7 +10,7 @@ import WeddingSection from "@/components/sections/wedding/Index";
 
 export default function Home() {
   return (
-    <div className=" w-full lg:w-[1728px]">
+    <div className="w-full max-w-[1728px] mx-auto overflow-x-hidden">
       <Hero />
       <ExperienceSection/>
       <Features />

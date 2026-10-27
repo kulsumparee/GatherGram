@@ -32,20 +32,20 @@ const NavBar = () => {
         <>
             {showNavbar ? (
                 <div>
-                    <nav className="absolute w-[1728px] h-[160px] top-0 left-0 right-0 z-50 backdrop-blur-sm">
+                    <nav className="absolute w-full h-[100px] lg:h-[160px] top-0 left-0 right-0 z-50 backdrop-blur-sm">
                         <div className="max-w-7xl mx-auto px-6 py-4">
                             <div className="flex items-center justify-between">
                                 <Link href="/" className="flex items-center gap-2">
                                     <Image src={logo} width={56} height={56} alt='navicon' />
-                                    <span className="text-white text-[40px] leading-[80px] font-medium font-mauline">GatherGram</span>
+                                    <span className="text-white text-2xl sm:text-3xl xl:text-[40px] leading-[80px] font-medium font-mauline">GatherGram</span>
                                 </Link>
 
-                                <div className="hidden md:flex items-center font-normal gap-8 font-maiandra">
+                                <div className="hidden xl:flex items-center font-normal gap-8 font-maiandra">
                                     {navLinks.map((link) => (
                                         <Link
                                             key={link.label}
                                             href={link.href}
-                                            className="text-white text-[24px] hover:text-white/80 transition-colors"
+                                            className="text-white text-xl 2xl:text-[24px] hover:text-white/80 transition-colors"
                                         >
                                             {link.label}
                                         </Link>
@@ -58,14 +58,14 @@ const NavBar = () => {
 
                                 <button
                                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                                    className="md:hidden text-white"
+                                    className="xl:hidden text-white"
                                 >
                                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                                 </button>
                             </div>
 
                             {isMenuOpen && (
-                                <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 border-t border-white/10">
+                                <div className="xl:hidden absolute top-full left-0 right-0 bg-black/95 border-t border-white/10">
                                     <div className="flex flex-col px-6 py-4 gap-4">
                                         {navLinks.map((link) => (
                                             <Link

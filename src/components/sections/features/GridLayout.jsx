@@ -76,24 +76,24 @@ const FeatureCard = ({ image, title, description }) => {
 };
 export default function FeaturesGrid() {
     return (
-        <div className="max-w-[1728px] mx-20 px-4 py-12">
-            <div className="grid grid-cols-2 gap-6">
+        <div className="max-w-[1728px] mx-auto md:mx-20 px-4 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
                 <div className="space-y-6">
                     
-                    <div className="h-[828px]">
+                    <div className="h-[320px] md:h-[828px]">
                         <FeatureCard {...features[0]} />
                     </div>
                    
-                    <div className="h-[404px]">
+                    <div className="h-[320px] md:h-[404px]">
                         <FeatureCard {...features[2]} />
                     </div>
                    
-                    <div className="h-[600px]">
+                    <div className="h-[320px] md:h-[600px]">
                         <FeatureCard {...features[4]} />
                     </div>
                    
-                    <div className="h-[404px]">
+                    <div className="h-[320px] md:h-[404px]">
                         <FeatureCard {...features[6]} />
                     </div>
                 </div>
@@ -101,15 +101,15 @@ export default function FeaturesGrid() {
               
                 <div className="space-y-6">
                    
-                    <div className="h-[404px]">
+                    <div className="h-[320px] md:h-[404px]">
                         <FeatureCard {...features[1]} />
                     </div>
                   
-                    <div className="h-[1150px]">
+                    <div className="h-[320px] md:h-[1150px]">
                         <FeatureCard {...features[3]} />
                     </div>
                    
-                    <div className="h-[700px]">
+                    <div className="h-[320px] md:h-[700px]">
                         <FeatureCard {...features[5]} />
                     </div>
                 </div>

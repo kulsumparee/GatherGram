@@ -3,13 +3,34 @@ import Image from 'next/image';
 import Button from '../common/Button';
 
 
+// Headline + call to action. Shared by the compact (mobile/tablet/laptop) layout and the 1728px collage layout.
+const ExperienceCopy = ({ className = "" }) => (
+    <div className={`text-center ${className}`}>
+        <h2 className="text-4xl sm:text-5xl 2xl:text-[80px] relative font-mauline">
+            Be Part of the Experience With
+        </h2>
+        <h3 className="text-[#D81159] text-4xl sm:text-5xl 2xl:text-[80px] font-mauline mb-8">
+            Our Exclusive Free Access!
+        </h3>
+        <p className="text-xl sm:text-2xl 2xl:text-[32px] font-maiandra max-w-[985px] mx-auto mb-8">
+            Join GatherGram's exclusive Free Access and explore everything
+            our platform has to offer
+        </p>
+        <Button title='Register for Free Access' className="w-full max-w-[480px] h-[84px] shadow-xl mt-6 2xl:mt-14 shadow-black " />
+    </div>
+);
+
 const ExperienceSection = () => {
-    
-
     return (
-        <div className="relative py-20 w-[1728px] h-[1003px] mx-auto">
+        <div className="relative w-full 2xl:w-[1728px] 2xl:h-[1003px] mx-auto py-16 2xl:py-20 px-4">
 
-            <div className="relative">
+            {/* Compact layout: below 1536px the pixel-positioned collage doesn't fit, so show the copy only */}
+            <div className="2xl:hidden py-10">
+                <ExperienceCopy />
+            </div>
+
+            {/* Decorative collage, designed for a 1728px canvas */}
+            <div className="relative hidden 2xl:block">
                  <span className="absolute font-mauline text-[24px] top-[180px] lef-[140px]  transform  font-handwriting text-[#eb97b6]">
                             effortless
                         </span>
@@ -91,19 +112,7 @@ const ExperienceSection = () => {
                     </div>
                 </div>
 
-                <div className="text-center absolute top-[174px] left-[420px] ">
-                    <h2 className="text-[80px] relative  font-mauline ">
-                        Be Part of the Experience With
-                    </h2>
-                    <h3 className="text-[#D81159] text-[80px] font-mauline mb-8">
-                        Our Exclusive Free Access!
-                    </h3>
-                    <p className="text-[32px] font-maiandra w-[985px] mb-8">
-                        Join GatherGram's exclusive Free Access and explore everything
-                        our platform has to offer
-                    </p>
-                    <Button title='Register for Free Access' className="w-[480px] h-[84px] shadow-xl mt-14 shadow-black " />
-                </div>
+                <ExperienceCopy className="absolute top-[174px] left-[420px]" />
                 <div className="absolute top-[750px] left-[213px] transform translate-y-[-50%]">
                     <div className="relative">
                         <Image

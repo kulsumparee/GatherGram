@@ -29,15 +29,15 @@ const Footer = () => {
         ]
     };
     return (
-        <div className=' bg-black w-[1728px] md:h-[712px] text-white px-10 md:px-20'>
+        <div id="contact" className=' bg-black w-full max-w-[1728px] mx-auto md:min-h-[712px] text-white px-6 md:px-20 pb-6'>
             <div className=' flex  md:flex-row flex-col items-center space-y-10 md:justify-between py-10 border-b'>
                 <div>
-                    <h1 className=' font-maiandra text-[32px] '>Join Our Newsletter</h1>
+                    <h1 className=' font-maiandra text-2xl md:text-[32px] '>Join Our Newsletter</h1>
                     <p className=' text-[14px] font-maiandra text-[#FAFAFA99]'>Keep up to date with our latest news</p>
                 </div>
 
-                <div className=' flex gap-4 items-center'>
-                    <input type="text" name="" id="input" placeholder='Enter your email' className='bg-[#D0D5DD] w-[352px] h-[44px] rounded-full pl-5 text-[#D81159] ' />
+                <div className=' flex flex-wrap justify-center gap-4 items-center w-full md:w-auto'>
+                    <input type="text" name="" id="input" placeholder='Enter your email' className='bg-[#D0D5DD] w-full max-w-[352px] h-[44px] rounded-full pl-5 text-[#D81159] ' />
                 <Button title='Subscribe' className="text-white w-[148px] h-[44px] text-[14px] " />
                 </div>
             </div>
@@ -50,7 +50,7 @@ const Footer = () => {
                               <Image src={logo} alt='footerlogo'/>
                                 <span className=" font-mauline text-[40px]">GatherGram</span>
                             </div>
-                            <p className="text-gray-400  text-4xl md:text-[25px] w-[350px] font-maiandra  pt-10">
+                            <p className="text-gray-400  text-xl md:text-[25px] max-w-[350px] font-maiandra pt-6 md:pt-10">
                                 We bring all your wedding essentials into one hassle-free, secure, and budget-friendly platform designed to make your day as seamless as it is unforgettable.
                             </p>
                             <button className=" py-2 px-2 rounded-full bg-white text-black hover:text-white transition-colors">
@@ -62,11 +62,11 @@ const Footer = () => {
                         <div className="lg:col-span-5 grid grid-cols-1 md:grid-cols-3 gap-8">
                             {Object.entries(footerLinks).map(([category, links]) => (
                                 <div key={category}>
-                                    <h3 className=" font-maiandra text-[40px] md:text-[25px] pb-5">{category}</h3>
+                                    <h3 className=" font-maiandra text-2xl md:text-[25px] pb-5">{category}</h3>
                                     <ul className="space-y-4">
                                         {links.map((link) => (
                                             <li key={link}>
-                                                <span className=" text-[#FAFAFA99] font-maiandra md:text-[25px] cursor-pointer hover:text-white transition-colors">
+                                                <span className=" text-[#FAFAFA99] font-maiandra text-lg md:text-[25px] cursor-pointer hover:text-white transition-colors">
                                                     {link}
                                                 </span>
                                             </li>

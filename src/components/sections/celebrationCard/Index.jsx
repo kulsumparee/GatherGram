@@ -1,142 +1,77 @@
 "use client"
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import { CelebrationCardData } from './CardData';
 
 const CelebrationCard = () => {
-   
-    const [expandedCards, setExpandedCards] = useState(new Set());
-
-    const toggleCard = (index) => {
-        setExpandedCards(prev => {
-            const newSet = new Set(prev);
-            if (newSet.has(index)) {
-                newSet.delete(index);
-            } else {
-                newSet.add(index);
-            }
-            return newSet;
-        });
-    };
-
     return (
-        <div className="relative min-h-[600px] w-[1728px] bg-[#EB87AB] p-8 md:p-16 overflow-hidden">
-            <div className="absolute top-8 left-8 w-10">
-                <Image src="/images/highlights/star1.svg" width={122} height={122} alt='star1' />
+        <section id="how-it-works" className="relative w-full max-w-[1728px] mx-auto min-h-[600px] bg-[#EB87AB] p-6 sm:p-8 md:p-16 overflow-hidden">
+            <div className="absolute top-8 left-8 w-10 hidden md:block">
+                <Image src="/images/highlights/star1.svg" width={122} height={122} alt='' />
             </div>
-            <div className="absolute top-16 right-16">
-                <Image src="/images/highlights/star2.svg" width={140} height={190} alt='star2' />
+            <div className="absolute top-16 right-16 hidden lg:block">
+                <Image src="/images/highlights/star2.svg" width={140} height={190} alt='' />
             </div>
-            <div className="absolute bottom-12 left-24">
-                <Image src="/images/highlights/star3.svg" width={176} height={176} alt='star3' />
+            <div className="absolute bottom-12 left-24 hidden md:block">
+                <Image src="/images/highlights/star3.svg" width={176} height={176} alt='' />
             </div>
-            <div className="absolute top-[80%] left-[80%]">
-                <Image src="/images/highlights/star1.svg" width={150} height={236} alt='star1' />
+            <div className="absolute top-[80%] left-[80%] hidden lg:block">
+                <Image src="/images/highlights/star1.svg" width={150} height={236} alt='' />
             </div>
             <div className="absolute -top-10 -right-36 w-72 h-72 bg-[#f1659d] rounded-full" />
 
             <div className="relative z-10 max-w-6xl mx-auto">
 
                 <div className="text-center mb-12">
-                    <div className='flex items-center justify-center gap-14'>
-                        <Image src="/images/highlights/line2.svg" width={158} height={157} alt='line' />
-                        <h2 className="font-mauline text-white text-[80px] mb-4">
+                    <div className='flex items-center justify-center gap-6 lg:gap-14'>
+                        <Image src="/images/highlights/Line2.svg" width={158} height={157} alt='' className="hidden lg:block" />
+                        <h2 className="font-mauline text-white text-4xl sm:text-6xl 2xl:text-[80px] mb-4">
                             Celebrate With Ease
                         </h2>
-                        <Image src="/images/highlights/line1.svg" width={158} height={157} alt='line' />
+                        <Image src="/images/highlights/Line1.svg" width={158} height={157} alt='' className="hidden lg:block" />
                     </div>
-                    <p className="font-maiandra text-white/90 text-[32px]">
-                        From setup to celebration, here's how we make your wedding day <br />
+                    <p className="font-maiandra text-white/90 text-lg sm:text-2xl 2xl:text-[32px]">
+                        From setup to celebration, here&apos;s how we make your wedding day{' '}
+                        <br className="hidden md:block" />
                         hassle-free
                     </p>
                 </div>
 
-
-                <div className=" flex gap-10 ">
+                <ol className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 list-none">
                     {CelebrationCardData.map((item, index) => (
-                        <ExpandableCard
-                            key={index}
-                            data={item}
-                            isExpanded={expandedCards.has(index)}
-                            onToggle={() => toggleCard(index)}
-                        />
+                        <StepCard key={item.title} data={item} step={index + 1} />
                     ))}
-                </div>
+                </ol>
             </div>
-        </div>
+        </section>
     );
 };
 
-
-const ExpandableCard = ({ data, isExpanded, onToggle }) => {
+const StepCard = ({ data, step }) => {
     return (
-        <div
-            onClick={onToggle}
-            className={`
-                
-                rounded-3xl 
-                shadow-lg 
-                cursor-pointer
-                transition-all 
-                duration-500 
-                  ${isExpanded ? ' bg-white' : 'bg-[rgb(252,173,205)] '}
-                ease-in-out
-                ${isExpanded ? 'md:w-[700px]' : 'max-w-28'}
-                h-full 
-                p-8 
-                relative
-                overflow-hidden
-            `}
-        >
-            <div className="inline-block mb-4">
+        <li className="rounded-3xl shadow-lg bg-white p-6 sm:p-8 flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#D81159] text-white font-maiandra text-2xl">
+                    {step}
+                </span>
                 <Image
                     src={data.img1}
-                    alt={data.title}
-                    width={100}
-                    height={100}
+                    alt=""
+                    width={46}
+                    height={48}
                     className="w-auto h-auto"
                 />
             </div>
-
-            <div className={`
-                transition-opacity 
-                duration-500
-                flex
-                
-                ${isExpanded ? 'opacity-100' : 'opacity-0'}
-            `}>
-                <div className="space-y-4">
-                    <h3 className="font-mauline text-[#EB6B9F] text-3xl mb-4">
-                        {data.title}
-                    </h3>
-                    <p className="font-maiandra text-xl text-gray-600">
-                        {data.description1}
-                    </p>
-                    <p className={`
-                        font-maiandra 
-                        text-gray-600
-                        transition-all 
-                        duration-500
-                        text-xl
-                        ${isExpanded ? 'block' : 'hidden'}
-                    `}>
-                        {data.description2}
-                    </p>
-                </div>
-
-                {isExpanded && (
-                    <div className="w-full mt-8 md:w-96 h-48">
-                        <Image
-                            src="/images/book.svg"
-                            alt="decorative image"
-                            className="mix-blend-multiply"
-                            width={300}
-                            height={317}
-                        />
-                    </div>
-                )}
-            </div>
-        </div>
+            <h3 className="font-mauline text-[#EB6B9F] text-2xl sm:text-3xl">
+                {data.title}
+            </h3>
+            <p className="font-maiandra text-lg sm:text-xl text-gray-700">
+                {data.description1}
+            </p>
+            <p className="font-maiandra text-base sm:text-lg text-gray-600">
+                {data.description2}
+            </p>
+        </li>
     );
 };
 
